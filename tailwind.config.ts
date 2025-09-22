@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -58,10 +59,23 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-sacred': 'var(--gradient-sacred)',
+        'gradient-blessing': 'var(--gradient-blessing)',
+      },
+      boxShadow: {
+        'temple': 'var(--shadow-temple)',
+        'divine': 'var(--shadow-divine)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        'display': ['Inter', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
