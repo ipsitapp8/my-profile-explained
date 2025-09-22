@@ -43,7 +43,10 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6"
+              onClick={() => document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Live Demo
             </Button>
           </div>
@@ -74,8 +77,14 @@ export const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="px-4 pt-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+               <div className="px-4 pt-2">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  onClick={() => {
+                    setIsOpen(false);
+                    document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Live Demo
                 </Button>
               </div>

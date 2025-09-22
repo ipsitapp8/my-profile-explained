@@ -48,6 +48,7 @@ export const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-temple"
+            onClick={() => document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Experience Live Demo
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -56,6 +57,7 @@ export const HeroSection = () => {
             variant="outline" 
             size="lg"
             className="bg-card/90 backdrop-blur-sm border-primary/30 text-card-foreground hover:bg-card px-8 py-4 text-lg font-semibold"
+            onClick={() => document.getElementById('app')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Technical Approach
           </Button>

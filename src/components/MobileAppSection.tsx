@@ -67,7 +67,11 @@ export const MobileAppSection = () => {
               <span className="font-semibold text-primary">6:30 PM</span>
             </div>
           </div>
-          <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+          <Button 
+            size="sm" 
+            className="w-full bg-primary hover:bg-primary/90"
+            onClick={() => alert('Booking feature - redirect to app!')}
+          >
             Book Next Slot
           </Button>
         </div>
@@ -187,13 +191,19 @@ export const MobileAppSection = () => {
             <div className="pt-6">
               <h4 className="font-semibold text-card-foreground mb-4">Download the App</h4>
               <div className="flex gap-4">
-                <Button className="bg-card border border-border text-card-foreground hover:bg-muted flex-1">
+                <Button 
+                  className="bg-card border border-border text-card-foreground hover:bg-muted flex-1"
+                  onClick={() => alert('App Store download - redirect to store!')}
+                >
                   <div className="text-left">
                     <div className="text-xs">Download on</div>
                     <div className="text-sm font-semibold">App Store</div>
                   </div>
                 </Button>
-                <Button className="bg-card border border-border text-card-foreground hover:bg-muted flex-1">
+                <Button 
+                  className="bg-card border border-border text-card-foreground hover:bg-muted flex-1"
+                  onClick={() => alert('Google Play download - redirect to store!')}
+                >
                   <div className="text-left">
                     <div className="text-xs">Get it on</div>
                     <div className="text-sm font-semibold">Google Play</div>
