@@ -16,8 +16,9 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6 font-display">
-            TEAM <span className="bg-gradient-sacred bg-clip-text text-transparent">HORK</span>
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display">
+            <span className="bg-gradient-sacred bg-clip-text text-transparent">TEAM</span>
+            <span className="text-primary-foreground ml-4">HORK</span>
           </h1>
           <p className="text-2xl md:text-3xl text-primary-foreground/90 mb-4 font-medium">
             A Journey Through Time and Culture

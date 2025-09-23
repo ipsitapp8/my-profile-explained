@@ -23,7 +23,10 @@ export const Navigation = () => {
               <span className="text-primary-foreground font-bold text-sm">H</span>
             </div>
             <div>
-              <div className="font-bold text-card-foreground text-lg">TEAM HORK</div>
+              <div className="font-bold text-lg">
+                <span className="bg-gradient-sacred bg-clip-text text-transparent">TEAM</span>
+                <span className="text-card-foreground ml-1">HORK</span>
+              </div>
               <div className="text-xs text-muted-foreground -mt-1">Smart Pilgrimage</div>
             </div>
           </div>
