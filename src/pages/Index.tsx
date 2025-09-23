@@ -4,6 +4,7 @@ import { SolutionOverview } from "@/components/SolutionOverview";
 import { DashboardPreview } from "@/components/DashboardPreview";
 import { MobileAppSection } from "@/components/MobileAppSection";
 import { ImpactSection } from "@/components/ImpactSection";
+import { IndiaHeritageMap } from "@/components/IndiaHeritageMap";
 
 const Index = () => {
   return (
@@ -18,6 +19,9 @@ const Index = () => {
           <DashboardPreview />
         </section>
         <MobileAppSection />
+        <section id="heritage-map">
+          <IndiaHeritageMap />
+        </section>
         <section id="impact">
           <ImpactSection />
         </section>

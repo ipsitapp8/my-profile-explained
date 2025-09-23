@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, BarChart3, Smartphone, Info } from "lucide-react";
+import { Menu, X, Home, BarChart3, Smartphone, Info, Map } from "lucide-react";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +8,7 @@ export const Navigation = () => {
   const navItems = [
     { icon: <Home className="w-4 h-4" />, label: "Home", href: "#home" },
     { icon: <BarChart3 className="w-4 h-4" />, label: "Dashboard", href: "#dashboard" },
+    { icon: <Map className="w-4 h-4" />, label: "Heritage Map", href: "#heritage-map" },
     { icon: <Smartphone className="w-4 h-4" />, label: "Mobile App", href: "#app" },
     { icon: <Info className="w-4 h-4" />, label: "Impact", href: "#impact" }
   ];
