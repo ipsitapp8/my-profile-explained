@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, BarChart3, Smartphone, Info, Map } from "lucide-react";
+import { Menu, X, Home, BarChart3, Smartphone, Info, Map, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { icon: <Home className="w-4 h-4" />, label: "Home", href: "#home" },
-    { icon: <BarChart3 className="w-4 h-4" />, label: "Dashboard", href: "#dashboard" },
-    { icon: <Map className="w-4 h-4" />, label: "Heritage Map", href: "#heritage-map" },
-    { icon: <Smartphone className="w-4 h-4" />, label: "Mobile App", href: "#app" },
-    { icon: <Info className="w-4 h-4" />, label: "Impact", href: "#impact" }
+    { icon: <Home className="w-4 h-4" />, label: "Home", href: "#home", type: "anchor" },
+    { icon: <BarChart3 className="w-4 h-4" />, label: "Dashboard", href: "#dashboard", type: "anchor" },
+    { icon: <Map className="w-4 h-4" />, label: "Heritage Map", href: "#heritage-map", type: "anchor" },
+    { icon: <Smartphone className="w-4 h-4" />, label: "Mobile App", href: "#app", type: "anchor" },
+    { icon: <User className="w-4 h-4" />, label: "Client Portal", href: "/client", type: "route" },
+    { icon: <Info className="w-4 h-4" />, label: "Impact", href: "#impact", type: "anchor" }
   ];
 
   return (
@@ -33,16 +35,27 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.icon}
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => 
+              item.type === "route" ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.icon}
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.icon}
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
 
           {/* CTA Button */}
@@ -70,17 +83,29 @@ export const Navigation = () => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border/50">
             <div className="space-y-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="flex items-center gap-3 px-4 py-3 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.icon}
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => 
+                item.type === "route" ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="flex items-center gap-3 px-4 py-3 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="flex items-center gap-3 px-4 py-3 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </a>
+                )
+              )}
                <div className="px-4 pt-2">
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
