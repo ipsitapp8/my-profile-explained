@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Users, Smartphone } from "lucide-react";
 import templeHero from "@/assets/temple-hero.jpg";
-
 export const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${templeHero})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${templeHero})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent" />
       </div>
       
@@ -17,8 +14,8 @@ export const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="mb-8">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display">
-            <span className="bg-gradient-sacred bg-clip-text text-transparent">TEAM</span>
-            <span className="text-primary-foreground ml-4">HORK</span>
+            <span className="bg-gradient-sacred bg-clip-text text-slate-50">TEAM</span>
+            <span className="ml-4 text-amber-400">HORK</span>
           </h1>
           <p className="text-2xl md:text-3xl text-primary-foreground/90 mb-4 font-medium">
             A Journey Through Time and Culture
@@ -46,20 +43,15 @@ export const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-temple"
-            onClick={() => document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' })}
-          >
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-temple" onClick={() => document.getElementById('dashboard')?.scrollIntoView({
+          behavior: 'smooth'
+        })}>
             Experience Live Demo
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="bg-card/90 backdrop-blur-sm border-primary/30 text-card-foreground hover:bg-card px-8 py-4 text-lg font-semibold"
-            onClick={() => document.getElementById('app')?.scrollIntoView({ behavior: 'smooth' })}
-          >
+          <Button variant="outline" size="lg" className="bg-card/90 backdrop-blur-sm border-primary/30 text-card-foreground hover:bg-card px-8 py-4 text-lg font-semibold" onClick={() => document.getElementById('app')?.scrollIntoView({
+          behavior: 'smooth'
+        })}>
             View Technical Approach
           </Button>
         </div>
@@ -75,6 +67,5 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

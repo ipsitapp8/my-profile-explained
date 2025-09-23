@@ -1,55 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Heart, 
-  Zap 
-} from "lucide-react";
-
+import { Shield, TrendingUp, Users, BarChart3, Heart, Zap } from "lucide-react";
 export const ImpactSection = () => {
-  const impacts = [
-    {
-      icon: <Shield className="w-12 h-12 text-primary" />,
-      title: "Enhanced Safety",
-      description: "Safer pilgrim movement with fewer accidents through intelligent crowd monitoring",
-      metric: "80% reduction in crowd-related incidents",
-      color: "bg-primary/10 border-primary/20"
-    },
-    {
-      icon: <Heart className="w-12 h-12 text-accent" />,
-      title: "Enriched Experience",
-      description: "Smooth and organized temple experience preserving spiritual sanctity",
-      metric: "95% pilgrim satisfaction rate",
-      color: "bg-accent/10 border-accent/20"
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-primary" />,
-      title: "Economic Growth",
-      description: "Boosted heritage tourism economy through better management",
-      metric: "40% increase in tourism revenue",
-      color: "bg-primary/10 border-primary/20"
-    },
-    {
-      icon: <BarChart3 className="w-12 h-12 text-accent" />,
-      title: "Data-Driven Insights",
-      description: "Comprehensive crowd analytics for authorities and policy makers",
-      metric: "Real-time data for 4 major temples",
-      color: "bg-accent/10 border-accent/20"
-    }
-  ];
-
-  const stats = [
-    { number: "4", label: "Sacred Sites", subtext: "Somnath, Dwarka, Ambaji, Pavagadh" },
-    { number: "10M+", label: "Annual Pilgrims", subtext: "Protected by our system" },
-    { number: "24/7", label: "Monitoring", subtext: "Continuous AI surveillance" },
-    { number: "99.9%", label: "Uptime", subtext: "Reliable temple operations" }
-  ];
-
-  return (
-    <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background">
+  const impacts = [{
+    icon: <Shield className="w-12 h-12 text-primary" />,
+    title: "Enhanced Safety",
+    description: "Safer pilgrim movement with fewer accidents through intelligent crowd monitoring",
+    metric: "80% reduction in crowd-related incidents",
+    color: "bg-primary/10 border-primary/20"
+  }, {
+    icon: <Heart className="w-12 h-12 text-accent" />,
+    title: "Enriched Experience",
+    description: "Smooth and organized temple experience preserving spiritual sanctity",
+    metric: "95% pilgrim satisfaction rate",
+    color: "bg-accent/10 border-accent/20"
+  }, {
+    icon: <TrendingUp className="w-12 h-12 text-primary" />,
+    title: "Economic Growth",
+    description: "Boosted heritage tourism economy through better management",
+    metric: "40% increase in tourism revenue",
+    color: "bg-primary/10 border-primary/20"
+  }, {
+    icon: <BarChart3 className="w-12 h-12 text-accent" />,
+    title: "Data-Driven Insights",
+    description: "Comprehensive crowd analytics for authorities and policy makers",
+    metric: "Real-time data for 4 major temples",
+    color: "bg-accent/10 border-accent/20"
+  }];
+  const stats = [{
+    number: "4",
+    label: "Sacred Sites",
+    subtext: "Somnath, Dwarka, Ambaji, Pavagadh"
+  }, {
+    number: "10M+",
+    label: "Annual Pilgrims",
+    subtext: "Protected by our system"
+  }, {
+    number: "24/7",
+    label: "Monitoring",
+    subtext: "Continuous AI surveillance"
+  }, {
+    number: "99.9%",
+    label: "Uptime",
+    subtext: "Reliable temple operations"
+  }];
+  return <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
@@ -65,8 +60,7 @@ export const ImpactSection = () => {
 
         {/* Impact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {impacts.map((impact, index) => (
-            <Card key={index} className={`border ${impact.color} bg-card/80 backdrop-blur-sm hover:shadow-temple transition-all duration-300 group`}>
+          {impacts.map((impact, index) => <Card key={index} className={`border ${impact.color} bg-card/80 backdrop-blur-sm hover:shadow-temple transition-all duration-300 group`}>
               <CardContent className="p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 p-4 rounded-xl bg-gradient-blessing">
@@ -86,15 +80,13 @@ export const ImpactSection = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-divine transition-all duration-300">
+          {stats.map((stat, index) => <div key={index} className="text-center group">
+              <div className="bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:shadow-divine transition-all duration-300 py-[24px]">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
                   {stat.number}
                 </div>
@@ -105,8 +97,7 @@ export const ImpactSection = () => {
                   {stat.subtext}
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Call to Action */}
@@ -129,6 +120,5 @@ export const ImpactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
